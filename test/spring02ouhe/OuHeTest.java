@@ -5,7 +5,7 @@ import org.junit.Test;
 public class OuHeTest {
     //创建几个类，模拟耦合
     @Test
-    public void test01(){
+    public void test01() throws Exception {
 //        //如果使用电脑传输数据
 //        Computer computer = new Computer();
 //        computer.usbData();
@@ -23,9 +23,15 @@ public class OuHeTest {
         //那么需要把usbData 方法提取成接口，然后使用多态的思想进行 代码更新，解耦一次
         //第一次 使用 接口，多态的思想 解耦，好处是，可以多次修改代码 不用改变量了，直接一个 usb 就可以代替上面的new对象
         //第二次解耦，即 代码更方便
-        Usb u = FactoryBean.getInstance("Computer");
-        u.usbData();
+//        Usb u = FactoryBean.getInstance("MyTv");
+//        u.usbData();
         //以上 第二次写法 是不是更优美，更 解耦了，让 用户 输入字符， 比 打开源代码 找到第几行更方便，将来源代码是需要加密的
+
+//        Usb u1 = FactoryBean01.getInstance("spring02ouhe.MyTv");
+//        u1.usbData();
+
+        Usb u1 = FactoryBean.getInstance("spring02ouhe.MyTv");
+        u1.usbData();
 
 
     }
