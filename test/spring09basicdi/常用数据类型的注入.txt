@@ -1,0 +1,7 @@
+1.String ，2 int 代表
+3.集合  list   set   map   properties
+
+注入方式1：
+xml 方式 注入
+
+Spring 的 el 表达式 ${}
